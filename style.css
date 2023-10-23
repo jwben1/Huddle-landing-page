@@ -58,6 +58,7 @@
     background-color: var(--clr-violet);
     background-image: url(images/bg-mobile.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     color: white;
     font-family: var(--ff-poppins);
   }
@@ -68,7 +69,8 @@
   }
 
   .page {
-    max-width: 325px;
+    max-width: 360px;
+    padding: 0 10px;
   }
   
   .page__logo {
@@ -104,6 +106,48 @@
   button:hover {
     cursor: pointer;
     background-color: var(--clr-softmagenta);
+  }
+
+  .icons-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 550px) {
+    
+    body {
+      background-image: url(images/bg-desktop.svg);
+    }
+
+    .page {
+      /* max-width: 750px; */
+      max-width: none;
+      display: flex;
+      /* no max-width
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1.5rem; */
+    }
+    
+    .aside {
+      /* remove all css */
+    }
+
+    .page__image {
+      /* remove width
+      keep the rest */
+    }
+
+    .page__content {
+      /* display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding: 1.5rem;
+      margin: auto;
+      gap: 1rem; */
+    }
   }
 
 
