@@ -139,14 +139,19 @@
     justify-content: center;
     margin-top: 3rem;
   }
+
+  .attribution {
+     font-size: 11px;
+     text-align: center;
+}
   }
 
 
 
-/* .attribution {
-     font-size: 11px;
+.attribution {
+     /* font-size: 11px; */
       text-align: center;
  }
-.attribution a { 
+/* .attribution a { 
     color: hsl(228, 45%, 44%);
  } */
