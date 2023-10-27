@@ -50,6 +50,21 @@
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
+  /*
+    8. Visually hidden content
+  */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 
   body {
     font-family: var(--ff-poppins);
@@ -86,6 +101,10 @@
     align-self: center;
   }
 
+  .hero__description p {
+    margin-bottom: 2rem;
+  }
+
   .hero__img {
     max-width: 55%;
   }
@@ -94,9 +113,11 @@
     padding: 0.938rem 3.75rem;
     border-radius: 3.125rem;
     border: none;
+    text-decoration: none;
+    background-color: white;
     color: var(--clr-violet);
     margin-top: 1rem;
-    cursor: pointer; 
+    cursor: pointer;   
   }
 
   .hero-btn:hover {
@@ -108,11 +129,24 @@
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    margin: 0 2.5rem 4rem 0 ;
   }
 
-  .socials-container a:hover {
-    opacity: 0.75;
+  .icon {
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    color: white;
+  } 
+
+  .icon:hover {
+    border: 1px solid var(--clr-softmagenta);
+    color: var(--clr-softmagenta);
   }
+
   
   @media (max-width: 60em) {
   body {
@@ -137,7 +171,7 @@
   
   .socials-container {
     justify-content: center;
-    margin-top: 3rem;
+    margin: 3rem 0 4rem 0;
   }
 
   .attribution {
